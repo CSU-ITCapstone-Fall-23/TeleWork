@@ -5,18 +5,19 @@ from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
 from forms.forms import LoginForm, RegistrationForm
 import os
+import flask_login
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 
-app.secret_key = 'your_secret_key_here'  # Change this to a secure key
+# app.secret_key = 'your_secret_key_here'  # Change this to a secure key
 # app.config['SESSION_TYPE'] = 'filesystem'  # Set the session type
 app.config['SECRET_KEY'] = os.urandom(24)
 bootstrap = Bootstrap(app)
 
 # Configure login manager
-login_manager = LoginManager()
+login_manager = flask_login.LoginManager()
 login_manager.login_view = 'login'
 login_manager.init_app(app)
 

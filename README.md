@@ -7,3 +7,7 @@ pip install flask-bootstrap
 
 #run the app 
 python app.py
+
+# Login/Registarion
+pip install Flask-Login Flask-WTF
+

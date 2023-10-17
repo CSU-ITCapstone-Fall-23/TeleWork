@@ -1,20 +1,23 @@
-from flask import Flask, render_template   
-from flask import Flask, render_template, request
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+import pytz
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
 from forms.forms import LoginForm, RegistrationForm
 import os
+from werkzeug.urls import urlencode
 import flask_login
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)
+app.config['TIMEZONE'] = pytz.timezone('America/New_York')
+# decoded_data = urlencode(query_string)
 
-# app.secret_key = 'your_secret_key_here'  # Change this to a secure key
-# app.config['SESSION_TYPE'] = 'filesystem'  # Set the session type
+# Create the Flask app
+app = Flask(__name__)
+csrf = CSRFProtect(app)
 app.config['SECRET_KEY'] = os.urandom(24)
-bootstrap = Bootstrap(app)
+app.config['TIMEZONE'] = pytz.timezone('America/New_York')  # Set your desired timezone
 
 # Configure login manager
 login_manager = flask_login.LoginManager()
@@ -104,6 +107,4 @@ def about():
     return render_template("about.html", aboutName=name)    
 
 if __name__ == "__main__":        # when running python app.py
-    #app.run()                     # run the flask app
-    #change app.run() to the following
     app.run(debug=True)

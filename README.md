@@ -16,6 +16,11 @@ pip3 install pytz
 
 # for database on Mongodb
 pip install Flask-PyMongo
+  # from mongodb
+    mongodb://localhost:27017
+    mongodb+srv://TeleWork:*****@cluster1.bryy6up.mongodb.net/
+    user:TeleWork
+    Password: CapStone2023
 
 # Login/Registarion
 pip install Flask-Login

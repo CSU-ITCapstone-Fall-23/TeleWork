@@ -11,6 +11,12 @@ pip install flask-bootstrap
 # run the app 
 python app.py
 
+# 'pytz' module
+pip3 install pytz
+
+# for database on Mongodb
+pip install Flask-PyMongo
+
 # Login/Registarion
 pip install Flask-Login
 

@@ -1,28 +1,38 @@
-import pytz
-from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_wtf.csrf import CSRFProtect
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
-from forms.forms import LoginForm, RegistrationForm
-import os
-from werkzeug.urls import urlencode
-import flask_login
+# import pytz
+# from flask import Flask, render_template, request, redirect, url_for, flash
+# # from flask_wtf.csrf import CSRFProtect
+# # from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
+# # from forms.forms import LoginForm, RegistrationForm
+# # import os
+# # from werkzeug.urls import urlencode
+# # import flask_login
+# from flask_bootstrap import Bootstrap
+# Import Flask-PyMongo
+# from flask_pymongo import PyMongo
+# from flask import jsonify
+from flask import Flask, render_template   
+from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
-csrf = CSRFProtect(app)
-app.config['TIMEZONE'] = pytz.timezone('America/New_York')
-# decoded_data = urlencode(query_string)
 
 # Create the Flask app
 app = Flask(__name__)
-csrf = CSRFProtect(app)
-app.config['SECRET_KEY'] = os.urandom(24)
-app.config['TIMEZONE'] = pytz.timezone('America/New_York')  # Set your desired timezone
+# Configure MongoDB
+# app.config['MONGO_URI'] = 'your_mongodb_uri_here'
+# mongo = PyMongo(app)
+app.secret_key = 'your_secret_key_here'  # Change this to a secure key
+app.config['SESSION_TYPE'] = 'filesystem'  # Set the session type
+bootstrap = Bootstrap(app)
+# csrf = CSRFProtect(app)
+# app.config['SECRET_KEY'] = os.urandom(24)
+# app.config['TIMEZONE'] = pytz.timezone('America/New_York')  # Set your desired timezone
+# decoded_data = urlencode(query_string)
 
-# Configure login manager
-login_manager = flask_login.LoginManager()
-login_manager.login_view = 'login'
-login_manager.init_app(app)
+# # Configure login manager
+# login_manager = flask_login.LoginManager()
+# login_manager.login_view = 'login'
+# login_manager.init_app(app)
 
 # Sample job listings (you can replace this with a database)
 job_listings = [
@@ -38,49 +48,49 @@ job_listings = [
     },
 ]
 
-# Mock user database
-class User(UserMixin):
-    def __init__(self, id):
-        self.id = id
-        self.username = "user"
-        self.password = "password"
+# # Mock user database
+# class User(UserMixin):
+#     def __init__(self, id):
+#         self.id = id
+#         self.username = "user"
+#         self.password = "password"
 
-users = {"user": User(1)}
+# users = {"user": User(1)}
 
-@login_manager.user_loader
-def load_user(user_id):
-    return users.get(user_id)
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return users.get(user_id)
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = users.get(form.username.data)
-        if user and form.password.data == user.password:
-            login_user(user)
-            return redirect(url_for('home'))
-    return render_template('login.html', form=form)
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     form = LoginForm()
+#     if form.validate_on_submit():
+#         user = users.get(form.username.data)
+#         if user and form.password.data == user.password:
+#             login_user(user)
+#             return redirect(url_for('home'))
+#     return render_template('login.html', form=form)
 
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('home'))
+# @app.route('/logout')
+# @login_required
+# def logout():
+#     logout_user()
+#     return redirect(url_for('home'))
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        if form.username.data not in users:
-            user = User(form.username.data)
-            user.password = form.password.data
-            users[user.username] = user
-            return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+# @app.route('/register', methods=['GET', 'POST'])
+# def register():
+#     form = RegistrationForm()
+#     if form.validate_on_submit():
+#         if form.username.data not in users:
+#             user = User(form.username.data)
+#             user.password = form.password.data
+#             users[user.username] = user
+#             return redirect(url_for('login'))
+#     return render_template('register.html', form=form)
 
 @app.route('/job/<int:job_id>')
 def job_details(job_id):

@@ -1,53 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.navbar li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.content {
-    margin-top: 60px; /* Adjust as needed */
-    padding: 20px;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-    text-align: center;
-}
-
-
 /* Amanda's css code */
 
 
@@ -58,7 +8,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  
 
 .button {
     display: inline-block;
@@ -82,42 +31,43 @@ body {
 .button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-}
+} */
 
-/* Navbar customization */
-.navbar {
+Navbar customization
+ .navbar {
     color: blue;
-    border-radius: 15px; /* Adjust the value to control the roundness */
+    border-radius: 15px; 
     font-size: 18px;
     font-weight: bold;
 }
 
-.navbar-toggler-icon {
-    background-color: #fff;
-    border-radius: 50%; /* This makes the toggle icon round */
+ .navbar-toggler-icon {
+    background-color: #fff; 
+    border-radius: 50%;  
+    /* This makes the toggle icon round */
 
-}
+ }
 
 .navbar-nav a {
     margin: 0 100px; /* Adjust the values to control horizontal and vertical spacing */
   }
   
 
-/* Header styles */
+Header styles
 h1, h2, h3 {
     text-align: center;
     margin-bottom: 20px;
     color: black;
 }
 
-/* Carousel container styles */
+Carousel container styles
 #carouselExampleSlidesOnly {
     margin-top: 20px;
 }
 
 /* Footer styles (adjust as needed) */
 footer {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 20px 0;
     text-align: center;
 }
@@ -125,10 +75,11 @@ footer {
 /* Responsive styles */
 @media (max-width: 767px) {
     body {
-        padding-top: 56px; /* Adjusted for the fixed navbar height in smaller screens */
+        padding-top: 56px;
+         /* Adjusted for the fixed navbar height in smaller screens */
     }
 
-    .navbar-expand-lg .navbar-nav .nav-link {
+   .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0;
         padding-left: 0.5rem;
     }

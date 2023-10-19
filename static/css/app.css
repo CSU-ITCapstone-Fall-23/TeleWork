@@ -31,15 +31,18 @@ body {
 .button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-} */
+} 
 
-Navbar customization
  .navbar {
-    color: blue;
+    background-color: black;
     border-radius: 15px; 
     font-size: 18px;
     font-weight: bold;
 }
+
+.navbar-nav .nav-item.nav-link :hover {
+    color: blue;
+  }
 
  .navbar-toggler-icon {
     background-color: #fff; 
@@ -53,7 +56,6 @@ Navbar customization
   }
   
 
-Header styles
 h1, h2, h3 {
     text-align: center;
     margin-bottom: 20px;

@@ -4,92 +4,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url_for('static',filename='css/app.css')}}">
-    <title>My Flask App</title>
+    <title>TeleWork.Inc</title>
   </head>
+  <style>
+
+    body {
+      background-image: url('{{ url_for('static', filename='Telework.jpeg') }}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+    }
+    
+    
+    .navbar-light .navbar-nav .nav-link {
+      color: black;
+    }
+    
+    .navbar-light .navbar-nav .nav-item.active .nav-link {
+      background-color: blue;
+      color: blue;
+    }
+    
+    .navbar-light .navbar-brand {
+      color: black; /* set color for hamburger bar */
+    }
+    
+    .navbar-light .navbar-toggler-icon {
+      background-color: white; /* Set the background color for the toggler icon */
+    }
+    
+    </style>
   <body>
-    {% extends "template.html" %}
-    {% block content %}
-    <div class="jumbotron">
-      <h1>Welcome to our Job Search Website</h1>
-      <p>Find your dream job here and apply today.</p>
-      <a href="{{ url_for('job_search') }}" class="btn btn-primary">Search Jobs</a>
-    </div>
-    {% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">TeleWork.Inc</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home</a>
+          <a class="nav-item nav-link" href="#">Job Postings</a>
+          <a class="nav-item nav-link" href="#">Interview Preparation</a>
+          <a class="nav-item nav-link" href="#">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+    
+    <h1>Find the Best Jobs to Work Remote!</h1>
+    <h2>Want Interview Prep? Sign up to get help today!</h2>
+    <h3>Find a Remote Jobs so you can work anywhere!</h3>
+    
+    <button class="button">Browse Remote Jobs</button>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
   </body>
+
 </html>
 
 
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" > 
-  <title>TeleWork</title>
-</head>
-<style>
-
-body {
-  background-image: url('{{ url_for('static', filename='Telework.jpeg') }}');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
-}
-
-
-.navbar-light .navbar-nav .nav-link {
-  color: black;
-}
-
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-  background-color: blue;
-  color: blue;
-}
-
-.navbar-light .navbar-brand {
-  color: black; /* set color for hamburger bar */
-}
-
-.navbar-light .navbar-toggler-icon {
-  background-color: white; /* Set the background color for the toggler icon */
-}
-
-</style>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">TeleWork.Inc</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">Job Postings</a>
-      <a class="nav-item nav-link" href="#">Interview Preparation</a>
-      <a class="nav-item nav-link" href="#">Contact Us</a>
-      <a class="nav-item nav-link" href="#">Login/SignUp</a>
-    </div>
-  </div>
-</nav>
-
-<h1>Find the Best Jobs to Work Remote!</h1>
-<h2>Want Interview Prep? Sign up to get help today!</h2>
-<h3>Find a Remote Jobs so you can work anywhere!</h3>
-
-<button class="button">Browse Remote Jobs</button>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</body>
-</html> -->
-
-    

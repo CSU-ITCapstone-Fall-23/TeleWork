@@ -8,6 +8,8 @@ pip install Flask
 
 pip install flask-bootstrap
 
+pip install --upgrade pip
+
 # run the app 
 python app.py
 

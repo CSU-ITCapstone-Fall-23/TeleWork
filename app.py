@@ -124,5 +124,18 @@ def interview():
 def contactus():
     return render_template("contact.html")    
 
+@app.route("/submit_contact", methods=["POST"])
+def submit_contact():
+    # Handle form submission here
+    # You can process the form data and save it to a database if needed
+    # For now, let's just redirect to the thank you page
+
+    return redirect(url_for('thank_you'))
+
+@app.route("/thankyou")
+def thank_you():
+    return render_template("thankyou.html")
+
+
 if __name__ == "__main__":        # when running python app.py
     app.run(debug=True)

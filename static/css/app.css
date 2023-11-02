@@ -136,14 +136,14 @@ body {
 
 .contact-form,
 .company-info {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6); /* 0.9 for 90% opacity */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-    width: 40%;
+    width: 45%;
 }
 
 form {
@@ -157,32 +157,38 @@ label {
 
 input,
 textarea {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .company-info {
-    width: 40%;
+    width: 45%;
     text-align: center;
 }
 
 .company-info h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #333;
 }
 
 .company-info p {
-    margin: 10px 0;
+    margin: 15px 0;
     color: #666;
+}
+
+/* thank you page */
+
+.thankyou-container{
+  text-align: center;
 }

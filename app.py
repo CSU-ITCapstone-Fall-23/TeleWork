@@ -116,5 +116,13 @@ def about():
     name = request.args.get('name') if request.args.get('name') else "Hello World!" 
     return render_template("about.html", aboutName=name)    
 
+@app.route("/interviewprep")
+def interview():
+    return render_template("interviewprep.html")    
+
+@app.route("/contact")
+def contactus():
+    return render_template("contact.html")    
+
 if __name__ == "__main__":        # when running python app.py
     app.run(debug=True)

@@ -9,7 +9,7 @@ body {
 
 .button {
     display: inline-block;
-    padding: 20px 45px;
+    padding: 20px 35px;
     font-size: 25px;
     text-align: center;
     text-decoration: none;
@@ -56,10 +56,19 @@ body {
   }
   
 
+.container{
+  margin-top: 100px; /* Adjust this value to move all the text down */
+  text-align: center;
+}
+
+
 h1, h2, h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: black;
+    font-family: Times New Roman ;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 
@@ -86,7 +95,7 @@ body {
   }
   
   .footer {
-    background-color: black;
+    background-color:black;
     color: white;
     font-size: 14px;
     padding: 10px;
@@ -110,4 +119,70 @@ body {
   
   
   
-  
+  /* css for contact page */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-form,
+.company-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.company-info {
+    width: 40%;
+    text-align: center;
+}
+
+.company-info h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.company-info p {
+    margin: 10px 0;
+    color: #666;
+}

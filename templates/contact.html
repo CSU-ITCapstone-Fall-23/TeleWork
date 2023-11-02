@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/app.css')}}">
+    <title>TeleWork</title>
+</head>
+<body>
+    <style>
+
+        body {
+          background-image: url('{{ url_for('static', filename='Working-from-home_g-stockstudio.png') }}'); 
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+        
+        
+        .navbar-light .navbar-nav .nav-link {
+          color: black;
+        }
+        
+        .navbar-light .navbar-nav .nav-item.active .nav-link {
+          background-color: blue;
+          color: blue;
+        }
+        
+        .navbar-light .navbar-brand {
+          color: white; /* set color for hamburger bar */
+        }
+        
+        .navbar-light .navbar-toggler-icon {
+          background-color: white; /* Set the background color for the toggler icon */
+        }
+        
+        </style>
+      <body>
+  
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">TeleWork.Inc</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
+            <a class="nav-item nav-link" href="{{ url_for('job_search') }}">Job Search</a>
+            <a class="nav-item nav-link" href="{{ url_for('interview') }}">Interview Preparation</a>
+            <a class="nav-item nav-link" href="{{ url_for('contactus') }}">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      
+
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="/submit_contact" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    
+        <div class="company-info">
+            <h2>Company Information</h2>
+            <p>Company Name</p>
+            <p>Address: 123 Main Street, Cityville</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: (555) 123-4567</p>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

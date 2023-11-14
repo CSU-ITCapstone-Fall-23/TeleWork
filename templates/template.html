@@ -14,21 +14,21 @@
     }
   </style>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">TeleWork.Inc</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-          <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
-          <a class="nav-item nav-link" href="#">Job Search</a>
-          <a class="nav-item nav-link" href="#">Interview Preparation</a>
-          <a class="nav-item nav-link" href="#">Contact Us</a>
-        </div>
+          <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
+              <a class="nav-item nav-link" href="{{ url_for('job_search') }}">Job Search</a>
+              <a class="nav-item nav-link" href="{{ url_for('interview') }}">Interview Preparation</a>
+              <a class="nav-item nav-link" href="{{ url_for('contactus') }}">Contact Us</a>
+          </div>
       </div>
-    </nav>
+  </nav>
     <div class="container mt-5">
       {% with messages = get_flashed_messages() %}
       {% if messages %}

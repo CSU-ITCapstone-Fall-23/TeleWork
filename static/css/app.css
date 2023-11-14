@@ -43,13 +43,6 @@ body {
  }  /* fix this needs to blue when users hover over the nav tab */
 
 
- /* .navbar-toggler-icon {
-    background-color: #fff; 
-    border-radius: 50%;   */
-    /* This makes the toggle icon round */
-
- /* } */
-
 .navbar-nav a {
     margin: 0 120px; 
     color: white;
@@ -72,12 +65,29 @@ h1, h2, h3 {
 }
 
 
-/* Responsive styles */
-@media (max-width: 767px) {
-  body {
-    padding-top: 56px;
+/* Styles for larger screens (laptops and desktops) */
+body {
+  font-size: 16px;
+}
 
+/* Styles for medium-sized screens (tablets) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
+}
+
+/* Styles for smaller screens (phones) */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-color: white;
+}
+}
+
 
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
@@ -94,8 +104,8 @@ body {
     padding: 0;
   }
   
-  .footer {
-    background-color:black;
+  .footer-dark {
+    background-color: #343a40; /* Use the desired dark color */
     color: white;
     font-size: 14px;
     padding: 10px;
@@ -103,19 +113,20 @@ body {
     bottom: 0;
     width: 100%;
     height: 8%;
-  }
-  
-  .footer ul {
+}
+
+.footer-dark ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around; 
-  }
-  
-  .footer li {
+    justify-content: space-around;
+}
+
+.footer-dark li {
     margin-right: 10px;
-  }
-  
+    color: white; /* Set the text color to white */
+}
+
   
   
   

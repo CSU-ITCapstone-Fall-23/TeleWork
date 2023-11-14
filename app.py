@@ -3,7 +3,8 @@ from flask import Flask, render_template
 from flask import Flask, render_template, request
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_bootstrap import Bootstrap
-
+#from flask_pymongo import PyMongo
+#from flask import jsonify
 
 # Create the Flask app
 app = Flask(__name__)
@@ -49,6 +50,7 @@ def apply_for_job(job_id):
 
 @app.route('/job_search')
 def job_search():
+    #job_listings = mongo.db.job_listings.find()
     return render_template('job_search.html', job_listings=job_listings)
 
 @app.route("/about")

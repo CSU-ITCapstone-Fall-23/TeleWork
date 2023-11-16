@@ -15,6 +15,8 @@ python app.py
 
 # for database on Mongodb
 pip install Flask-PyMongo
+pip install Flask Flask-PyMongo Flask-Bootstrap
+
   # from mongodb
     mongodb://localhost:27017
     mongodb+srv://TeleWork:*****@cluster1.bryy6up.mongodb.net/

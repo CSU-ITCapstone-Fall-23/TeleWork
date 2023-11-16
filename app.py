@@ -9,10 +9,8 @@ from flask_bootstrap import Bootstrap
 # Create the Flask app
 app = Flask(__name__)
 # Configure MongoDB
-# app.config['MONGO_URI'] = 'your_mongodb_uri_here'
+# app.config['MONGO_URI'] = 'mongodb+srv://<TeleWork>:<CapStone2023>@cluster1.bryy6up.mongodb.net/'
 # mongo = PyMongo(app)
-app.secret_key = 'your_secret_key_here'  # Change this to a secure key
-app.config['SESSION_TYPE'] = 'filesystem'  # Set the session type
 bootstrap = Bootstrap(app)
 
 # Sample job listings (you can replace this with a database)
@@ -40,6 +38,14 @@ def job_details(job_id):
         return render_template('job_details.html', job=job)
     else:
         return 'Job not found', 404
+# @app.route('/job/<int:job_id>')
+# def job_details(job_id):
+#     job = mongo.db.IndeedJobs.DBJobs.find_one({'_id': ObjectId(job_id)}) 
+#     if job:
+#         return render_template('job_details.html', job=job)
+#     else:
+#         return 'Job not found', 404
+
 
 @app.route('/apply/<int:job_id>', methods=['POST'])
 def apply_for_job(job_id):
@@ -50,7 +56,7 @@ def apply_for_job(job_id):
 
 @app.route('/job_search')
 def job_search():
-    #job_listings = mongo.db.job_listings.find()
+    #job_listings = mongo.db.IndeedJobs.DBJobs.find()
     return render_template('job_search.html', job_listings=job_listings)
 
 @app.route("/about")

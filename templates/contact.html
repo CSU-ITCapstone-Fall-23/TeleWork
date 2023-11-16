@@ -18,37 +18,21 @@
     }
     
     
-    .navbar-light .navbar-nav .nav-link {
+    /* .navbar-light .navbar-nav .nav-link {
       color: black;
     }
     
     .navbar-light .navbar-nav .nav-item.active .nav-link {
       background-color: blue;
       color: blue;
-    }
+    } */
     
     
     </style>
       <body>
-  
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">TeleWork.Inc</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                  <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-                  <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
-                  <a class="nav-item nav-link" href="{{ url_for('job_search') }}">Job Search</a>
-                  <a class="nav-item nav-link" href="{{ url_for('interview') }}">Interview Preparation</a>
-                  <a class="nav-item nav-link" href="{{ url_for('contactus') }}">Contact Us</a>
-              </div>
-          </div>
-      </nav>
-      
-
-    <div class="contact-container">
+        {% extends "template.html" %}
+        {% block content %}    
+        <div class="contact-container">
         <div class="contact-form">
             <h2>Contact Us</h2>
             <form action="/submit_contact" method="post">
@@ -73,6 +57,7 @@
             <p>Phone: (555) 123-4567</p>
         </div>
     </div>
+    {% endblock %} 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

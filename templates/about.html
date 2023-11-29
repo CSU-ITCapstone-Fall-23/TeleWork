@@ -39,8 +39,24 @@
     <title>About</title>
 </head>
 <body>
-    {% extends "template.html" %}
-    {% block content %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TeleWork.Inc</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
+                <a class="nav-item nav-link active" href="{{ url_for('job_search') }}">Job Search</a>
+                <a class="nav-item nav-link active" href="{{ url_for('interview') }}">Interview Preparation</a>
+                <a class="nav-item nav-link active" href="{{ url_for('contactus') }}">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+  
         <div class="container mt-5">
 
             <h1 class="display-4">TeleWork Application Summary</h1>
@@ -89,7 +105,7 @@
 
 
         </div>
-    {% endblock %}
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>

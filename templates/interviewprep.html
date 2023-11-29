@@ -9,23 +9,122 @@
 <body>
     {% extends "template.html" %}
     {% block content %}
-    <div class="interviewprep-container">
-        <h2>Interview Preparation</h2>
-        <p>This is your interview preparation page content.</p>
-        <ul>
-            <li>Data Structures</li>
-            <li>Algorithms</li>
-            <li>System Design</li>
-            <li>Database Management</li>
-            <li>Programming Languages (e.g., Python, Java, C++)</li>
-            <li>Operating Systems</li>
-            <li>Networking</li>
-            <li>Web Technologies</li>
-            <li>Problem Solving Techniques</li>
-            <li>Mock Interviews</li>
-        </ul>
-        <p>Explore online platforms, books, and coding practice websites to enhance your skills.</p>
-    </div>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #004080;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            background-color: #004080;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #002b66;
+        }
+
+        a {
+            color: #008CBA;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interview Preparation Questions</h1>
+
+    <!-- Format 1: Traditional Interview Questions -->
+    <section>
+        <h2>Traditional Interview Questions</h2>
+        <p>
+            <strong>Behavioral Questions:</strong><br>
+            - Describe a challenging situation you faced at work and how you handled it.<br>
+            - Can you give an example of a time when you had to meet a tight deadline? How did you manage it?
+        </p>
+        <p>
+            <strong>Technical Questions:</strong><br>
+            - Explain the process of [relevant technical skill] and its importance in [industry].<br>
+            - How would you troubleshoot [common issue related to the job]?
+        </p>
+        <p>
+            <strong>Company-specific Questions:</strong><br>
+            - What do you know about our company, and why do you want to work here?<br>
+            - How do you think your skills align with the values of our organization?
+        </p>
+        <button onclick="window.location.href='https://www.indeed.com/'">Explore More on Indeed</button>
+    </section>
+
+    <!-- Format 2: Scenario-Based Questions -->
+    <section>
+        <h2>Scenario-Based Questions</h2>
+        <p>
+            <strong>Problem-Solving Scenarios:</strong><br>
+            - You are given a project with a tight deadline. How would you approach it to ensure successful completion?<br>
+            - If a team member is not contributing effectively, what steps would you take to address the issue?
+        </p>
+        <p>
+            <strong>Hypothetical Situations:</strong><br>
+            - If you were faced with an unexpected challenge in the middle of a project, how would you adapt and overcome it?<br>
+            - Imagine a scenario where a client is dissatisfied. How would you handle the situation to ensure client satisfaction?
+        </p>
+        <p>
+            <strong>Role-specific Scenarios:</strong><br>
+            - As a [position], how would you prioritize tasks and manage your time effectively?<br>
+            - In your role, you may need to [specific task]. Can you walk us through your approach to handling this responsibility?
+        </p>
+        <button onclick="window.location.href='https://www.glassdoor.com/'">Explore More on Glassdoor</button>
+    </section>
+
+    <!-- Format 3: Interactive and Creative Questions -->
+    <section>
+        <h2>Interactive and Creative Questions</h2>
+        <p>
+            <strong>Role-play Scenarios:</strong><br>
+            - Pretend you are in a client meeting. How would you explain a complex technical concept to a non-technical audience?<br>
+            - Imagine you are the team leader. How would you motivate your team during a challenging project?
+        </p>
+        <p>
+            <strong>Project Visualization:</strong><br>
+            - If you were to create a visual representation of your ideal project workflow, what would it look like?<br>
+            - Can you draw or describe a flowchart of how you would execute a successful [relevant task]?
+        </p>
+        <p>
+            <strong>Innovative Problem-solving:</strong><br>
+            - If you were given unlimited resources, how would you revolutionize [industry-related process]?<br>
+            - Share an innovative idea you have implemented in the past to improve efficiency or productivity in your work.
+        </p>
+        <button onclick="window.location.href='https://www.linkedin.com/'">Connect on LinkedIn for more Insights</button>
+    </section>
     {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>

@@ -8,6 +8,17 @@ body {
 
 }
 
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-nav a {
+  font-weight: normal;
+  letter-spacing: 1px; /* Adjust the value as needed */
+  text-align: center;
+}
+
+
 h1, h2, h3 {
   text-align: center;
   margin-bottom: 25px;
@@ -22,22 +33,6 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* Navbar Styles */
-/* .navbar {
-  background-color: black;
-  border-radius: 15px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.navbar-nav .nav-item.nav-link {
-  margin: 0 15px;
-  color: white;
-}
-
-.navbar-nav .nav-item.nav-link.active {
-  color: #0056b3;
-} */
 
 /* Button Styles */
 .button {

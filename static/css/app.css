@@ -1,21 +1,11 @@
 
 
-/* body {
-    url('{{ url_for('static', filename='Telework.jpeg') }}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  } */
-
 /* Global Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  url('{{ url_for('static', filename='Telework.jpeg') }}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
 }
 
 h1, h2, h3 {
@@ -33,7 +23,7 @@ h1, h2, h3 {
 }
 
 /* Navbar Styles */
-.navbar {
+/* .navbar {
   background-color: black;
   border-radius: 15px;
   font-size: 16px;
@@ -47,7 +37,7 @@ h1, h2, h3 {
 
 .navbar-nav .nav-item.nav-link.active {
   color: #0056b3;
-}
+} */
 
 /* Button Styles */
 .button {

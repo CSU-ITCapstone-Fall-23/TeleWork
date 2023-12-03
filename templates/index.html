@@ -17,16 +17,6 @@
     }
     
     
-    /* .navbar-light .navbar-nav .nav-link {
-      color: black;
-    }
-    
-    .navbar-light .navbar-nav .nav-item.active .nav-link {
-      background-color: blue;
-      color: blue;
-    }
-     */
-    
     </style>
   <body>
 
@@ -35,7 +25,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div class="navbar-nav">
               <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
               <a class="nav-item nav-link active" href="{{ url_for('about') }}">About Us</a>
@@ -45,6 +35,7 @@
           </div>
       </div>
   </nav>
+  
   
     
 
@@ -57,17 +48,6 @@
   <a href="{{ url_for('job_search') }}">
     <button class="button">Browse Remote Jobs</button>
   </a>
-      <!-- <div class="footer footer-dark">
-      <footer>
-        <p>&copy; 2023 TeleWork.Inc</p>
-        <ul>
-          <li>Adeola Ogundipe</li>
-          <li>Amanda Candies</li>
-          <li>Kanesha Mcgraw</li>
-        </ul>
-      </footer>
-    </div> -->
-    
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

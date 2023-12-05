@@ -10,11 +10,13 @@ pip install flask-bootstrap
 
 pip install --upgrade pip
 
+# for database on Mongodb
+pip install Flask-PyMongo
+
 # run the app 
 python app.py
 
-# for database on Mongodb
-pip install Flask-PyMongo
+# for render
 pip install Flask Flask-PyMongo Flask-Bootstrap
 
   # from mongodb

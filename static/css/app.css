@@ -28,7 +28,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #17a2b8; /* Color on hover or focus */
+  color: #086cee; /* Color on hover or focus */
 }
 
 .navbar-nav {
@@ -38,6 +38,7 @@ body {
 
 .nav-item {
   padding: 0 15px;
+  margin-right: 20px;
 }
 
 h1, h2, h3 {

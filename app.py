@@ -18,7 +18,7 @@ bootstrap = Bootstrap(app)
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(url, server_api=ServerApi('1'))
 try:
     client.admin.command('ping')
     db = client.IndeedJobs
@@ -33,7 +33,7 @@ except Exception as e:
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(url, server_api=ServerApi('1'))
 try:
     client.admin.command('ping')
     db = client.RemoteCo
@@ -48,7 +48,7 @@ except Exception as e:
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(url, server_api=ServerApi('1'))
 try:
     client.admin.command('ping')
     db = client.InterviewPrep

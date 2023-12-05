@@ -4,8 +4,8 @@ from flask import Flask, render_template, request
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_bootstrap import Bootstrap
 from pymongo import MongoClient
-#from flask_pymongo import PyMongo
-#from flask import jsonify
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 # Create the Flask app
 app = Flask(__name__)
@@ -15,8 +15,6 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 #code for accessing the indeed jobs database
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(url, server_api=ServerApi('1'))
 try:
@@ -30,8 +28,6 @@ except Exception as e:
     print(e)
 
 #code for accessing RemoteCo database
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(url, server_api=ServerApi('1'))
 try:
@@ -45,8 +41,6 @@ except Exception as e:
     print(e)  
 
 #code for accessing data from the interviewprep database, mixture of questions and answers, and dress code advice
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(url, server_api=ServerApi('1'))
 try:
@@ -84,9 +78,16 @@ def job_details(job_id):
         return render_template('job_details.html', job=job)
     else:
         return 'Job not found', 404
+# @app.route('/')
+# def home():
+#     # Fetch job listings from MongoDB - replace 'IndeedJobs' with your actual collection name
+#     job_listings = list(client.IndeedJobs.IndeedJobs.find())
+#     return render_template('index.html', job_listings=job_listings)
+
 # @app.route('/job/<int:job_id>')
 # def job_details(job_id):
-#     job = mongo.db.IndeedJobs.DBJobs.find_one({'_id': ObjectId(job_id)}) 
+#     # Fetch job details from MongoDB - replace 'IndeedJobs' with your actual collection name
+#     job = client.IndeedJobs.IndeedJobs.find_one({'_id': ObjectId(job_id)})
 #     if job:
 #         return render_template('job_details.html', job=job)
 #     else:

@@ -2,21 +2,43 @@
 
 /* Global Styles */
 body {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  background-color: #f5f5f5;
+  color: #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-}
-
-.navbar-nav {
-  text-align: center;
 }
 
 .navbar-nav a {
   font-weight: normal;
   text-align: center;
 }
+.navbar {
+  background-color: #343a40; /* Dark background color */
+}
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  color: #fff; /* White text color */
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #17a2b8; /* Color on hover or focus */
+}
+
+.navbar-nav {
+  margin: auto;
+  text-align: center;
+}
+
+.nav-item {
+  padding: 0 15px;
+}
 
 h1, h2, h3 {
   text-align: center;

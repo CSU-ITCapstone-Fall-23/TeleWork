@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from flask import Flask, render_template, request
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_bootstrap import Bootstrap
+from pymongo import MongoClient
 #from flask_pymongo import PyMongo
 #from flask import jsonify
 
@@ -13,6 +14,51 @@ app = Flask(__name__)
 # mongo = PyMongo(app)
 bootstrap = Bootstrap(app)
 
+#code for accessing the indeed jobs database
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri, server_api=ServerApi('1'))
+try:
+    client.admin.command('ping')
+    db = client.IndeedJobs
+    indeed = db["IndeedJobs"]
+    for job in indeed.find():
+        print(job)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+
+#code for accessing RemoteCo database
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri, server_api=ServerApi('1'))
+try:
+    client.admin.command('ping')
+    db = client.RemoteCo
+    indeed = db["RemoteCo"]
+    for job in indeed.find():
+        print(job)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)  
+
+#code for accessing data from the interviewprep database, mixture of questions and answers, and dress code advice
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+url = "mongodb+srv://TeleWork:CapStone2023@cluster1.bryy6up.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri, server_api=ServerApi('1'))
+try:
+    client.admin.command('ping')
+    db = client.InterviewPrep
+    indeed = db["InterviewPrep"]
+    for job in indeed.find():
+        print(job)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e) 
+    
 # Sample job listings (you can replace this with a database)
 job_listings = [
     {
